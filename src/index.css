@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-light: #ffffff;
+  --color-text-light: #000000;
+  --color-bg-dark: #242533;
+  --color-text-dark: #ffffff;
+}
+
+* {
+  transition: background-color 1s ease, color 0.3s ease;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.light {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
+}
+
+.dark {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}

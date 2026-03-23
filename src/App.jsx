@@ -2,7 +2,8 @@ import { useState } from "react";
 import Header from "./components/Header";
 import AboutMe from "./components/AboutMe";
 import "./index.css";
-import Hero from "./components/Hero";
+import SuperPowers from "./components/SuperPowers";
+// import Hero from "./components/Hero";
 
 function App() {
   const [isDark, setIsDark] = useState(true);
@@ -14,8 +15,9 @@ function App() {
   return (
     <div className={isDark ? "dark" : "light"}>
       <Header isDark={isDark} toggleTheme={toggleTheme} />
-      <Hero />
+      {/* <Hero /> */}
       <AboutMe isDark={isDark} />
+      <SuperPowers isDark={isDark}/>
     </div>
   );
 }

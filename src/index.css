@@ -13,7 +13,7 @@
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:'Poppins' , system-ui, -apple-system, sans-serif;
 }
 
 .light {
@@ -24,4 +24,33 @@ body {
 .dark {
   background-color: var(--color-bg-dark);
   color: var(--color-text-dark);
+}
+
+
+
+
+.tubelight span {
+  display: inline-block;
+  color: #fff; 
+  animation: flicker 8s linear infinite;
+  animation-delay: calc(1.1s * var(--i));
+  padding: 0 2px;
+}
+
+@keyframes flicker {
+  
+  0%, 19.9%, 22%, 62.9%, 65%, 100% {
+    opacity: 1;
+    text-shadow: 
+      0 0 7px #00f2ff90,
+      /* 0 0 10px #00f3ff, */
+      /* 0 0 21px #00f3ff, */
+      0 0 20px #00f2ff98;
+  }
+  
+  20%, 21.9%, 63%, 64.9% {
+    opacity: 0.4; 
+    text-shadow: none;
+    color: rgba(255, 255, 255, 0.2);
+  }
 }

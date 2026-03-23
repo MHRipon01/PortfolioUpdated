@@ -1,41 +1,74 @@
-import React from 'react';
+import Typewriter from "typewriter-effect";
 
 const Header = ({ isDark, toggleTheme }) => {
-    return (
-        <header style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            padding: '20px 40px',
-            borderBottom: `1px solid ${isDark ? '#3d3d4a' : '#e5e4e7'}`,
-            backgroundColor: isDark ? '#242533' : '#ffffff'
-        }}>
-            <h2 style={{
-                margin: 0,
-                fontSize: '24px',
-                fontWeight: 'bold',
-                color: isDark ? '#ffffff' : '#000000'
-            }}>
-                Ripon
-            </h2>
-            <button
-                onClick={toggleTheme}
-                style={{
-                    padding: '10px 20px',
-                    borderRadius: '8px',
-                    border: 'none',
-                    cursor: 'pointer',
-                    backgroundColor: isDark ? '#ffffff' : '#000000',
-                    color: isDark ? '#242533' : '#ffffff',
-                    fontSize: '14px',
-                    fontWeight: '600',
-                    transition: 'all 0.3s ease'
-                }}
-            >
-                {isDark ? '☀️' :'🌙' }
-            </button>
-        </header>
-    );
+  return (
+    <div
+      className={` w-full bg-[linear-gradient(to_bottom,_#1a1b4b_0%,_#2d1b4d_50%,_#5c3a72_100%)] textbl  justify-between items-center px-[40px] 40px] ${isDark ? "border-b-[#3d3d4a] bg-[#242533]" : "bg-[#ffffff] border-b-[#e5e4e7]"} `}
+    >
+      <header
+        className={` w-full flex justify-between items-center px-[40px] py-[40px]   } `}
+        style={{}}
+      >
+        <h2 className={`m-0 text-2xl font-bold text-white `}>Ripon</h2>
+        <button
+          onClick={toggleTheme}
+          className={`px-5 py-2.5 rounded-lg cursor-pointer text-sm font-semibold transition-all duration-300 ease-in-out border-none
+    ${isDark ? "bg-white text-[#242533]" : "bg-black text-white"}`}
+        >
+          {isDark ? "☀️" : "🌙"}
+        </button>
+      </header>
+      <div className="h-[590px] w-full ">
+        <div className="p-8 text-white w-full items-center flex justify-center  text-start h-full">
+          <div className="relative lg:right-[250px]">
+            <h2 className="text-xl">Hi, I'm</h2>
+            <div className="flex gap-2">
+              <div className="text-5xl font-bold tubelight flex flex-wrap">
+                {"MEHEDI HASAN RIPON".split("").map((letter, index) => (
+                  <span
+                    key={index}
+                    style={{ "--i": index }}
+                    className={letter === " " ? "w-4" : ""}
+                  >
+                    {letter === " " ? "\u00A0" : letter}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-4 font-mono text-xl text-white">
+              <span>
+                Web browsers are my canvas and I love to paint them with{" "}
+              </span>
+
+              <span className="text-cyan-400 font-bold inline-block">
+                <Typewriter
+                  options={{
+                    strings: [
+                      "React",
+                      "Next.js",
+                      "Shopify",
+                      "CSS..",
+                      "JavaScript..",
+                      "Liquid",
+                      "Motion..",
+                      "Tailwind..",
+                    ],
+                    autoStart: true,
+                    loop: true,
+                    deleteSpeed: 50,
+                    delay: 120,
+                  }}
+                />
+              </span>
+            </div>
+
+            <div className="mt-4 font-mono text-cyan-400"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Header;

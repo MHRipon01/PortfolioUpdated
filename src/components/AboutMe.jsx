@@ -6,29 +6,24 @@ import { MdWorkOutline } from "react-icons/md";
 const AboutMe = ({ isDark }) => {
   return (
     <section
-      style={{
-        padding: "40px",
-        maxWidth: "800px",
-        margin: "0 auto",
-      }}
+    className="p-10 max-w-200 m-auto "
+   
     >
-
       <div
-        className={` py-16 px-4 flex justify-center ${isDark ? "border-2" : "border-0"} shadow-2xl border-2 rounded-2xl`}
+        className={` py-16 px-4 flex justify-center ${isDark ? "border border-[#00f2ffb4] bg-[#242533]" : "bg-[#FFFFFF"} relative lg:bottom-50  shadow-2xl border-2 rounded-2xl`}
       >
         <div className="max-w-4xl w-full  backdrop-blur-md rounded-2xl shadow-xl p-8">
           {/* Header */}
           <div className="flex items-center gap-4 mb-6 ">
             <img
-             src="/src/assets/edited-removebg-preview.png"
-             
+              src="/src/assets/edited-removebg-preview.png"
               className="w-[140px] h-[140px] rounded-xl object-cover"
             />
             <h2
               style={{
                 fontSize: "32px",
                 fontWeight: "bold",
-                color: isDark ? "#ffffff" : "#286745",
+                color: isDark ? "#ffffff" : "black",
 
                 marginBottom: "20px",
               }}
@@ -48,7 +43,7 @@ const AboutMe = ({ isDark }) => {
             </span>
 
             <span className="flex items-center gap-2 px-4 py-1 rounded-full bg-orange-100 text-orange-600 text-sm">
-              <IoLocationOutline /> Cumilla , Bangladesh 
+              <IoLocationOutline /> Cumilla , Bangladesh
             </span>
           </div>
 
@@ -93,7 +88,6 @@ const AboutMe = ({ isDark }) => {
           </div>
         </div>
       </div>
-      );
     </section>
   );
 };

@@ -1,0 +1,22 @@
+.tubelight span {
+  color: #8c53ed;
+  /* Apply delay based on the --i variable from JSX */
+  animation: animate 5s linear infinite;
+  animation-delay: calc(0.1s * var(--i)); 
+  display: inline-block;
+  padding: 0 2px;
+}
+
+@keyframes animate {
+  0%, 15%, 25%, 30%, 65%, 95% {
+    color: #8c53ed;
+    text-shadow: none;
+  }
+  /* The "On" state */
+  10%, 20%, 31%, 60%, 100% {
+    color: #56d2f5;
+    text-shadow: 0 0 10px #56d2f5, 
+                 0 0 20px #56d2f5, 
+                 0 0 40px #56d2f5;
+  }
+}

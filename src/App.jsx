@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import AboutMe from "./components/AboutMe";
 import "./index.css";
 import SuperPowers from "./components/SuperPowers";
+import Projects from "./components/projects/Projects";
 // import Hero from "./components/Hero";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       {/* <Hero /> */}
       <AboutMe isDark={isDark} />
       <SuperPowers isDark={isDark}/>
+      <Projects isDark={isDark} />
     </div>
   );
 }

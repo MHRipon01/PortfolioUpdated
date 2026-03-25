@@ -1,4 +1,8 @@
 import { FaLinkedinIn, FaGithub, FaGoogle, FaXTwitter } from "react-icons/fa6";
+import Githubsvg from "/src/components/Footer/Githubsvg.svg";
+import Twittersvg from "/src/components/Footer/twittersvg.svg";
+import Gmailsvg from "/src/components/Footer/Gmail.png";
+import Lisvg from "/src/components/Footer/li.svg";
 
 export default function Footer({ isDark }) {
   return (
@@ -26,16 +30,16 @@ export default function Footer({ isDark }) {
             {/* Icons */}
             <div className="flex gap-4 mt-4 text-xl">
               <a href="https://www.linkedin.com/in/md-mehedi-hasan-ripon-93508b1b1/" className="hover:text-white transition">
-               <img src="/src/components/Footer/li.svg" alt="" />
+               <img src={Lisvg} alt="" />
               </a>
               <a href="https://github.com/mhripon01" className="hover:text-white transition">
-                <img src="/src/components/Footer/Githubsvg.svg" alt="" />
+                <img src={Githubsvg} alt="" />
               </a>
               <a href="mailto:mhripon012@gmail.com" className="hover:text-white w-12 transition">
-                <img  src="/src/components/Footer/Gmail.png" alt="" />
+                <img  src={Gmailsvg} alt="" />
               </a>
               <a href="#" className="hover:text-white transition">
-               <img src="/src/components/Footer/twittersvg.svg" alt="" />
+               <img src={Twittersvg} alt="" />
               </a>
             </div>
           </div>
@@ -56,7 +60,7 @@ export default function Footer({ isDark }) {
 
         {/* Bottom */}
         <div className="mt-10  text-center text-sm opacity-70">
-          <p>© 2025 Your Name. All rights reserved.</p>
+          <p>© 2025 Mehedi Hasan Ripon. All rights reserved.</p>
           <p className="mt-1 text-sm">
             Made with <span className="text-xl text-pink-500 animate-pulse">♥</span>
           </p>

@@ -1,32 +1,35 @@
 import { useState, useEffect } from "react";
 import { FaGithub, FaGlobe, FaBriefcase, FaCode, FaRocket, FaLaptopCode } from "react-icons/fa";
-
+import foodfirst from "/src/components/projects/foodfirst.png";
+import skillsurge from "/src/components/projects/skillsurge.png";
+import buyease from "/src/components/projects/buyease.png";
+import dazzling from "/src/components/projects/dazzling days.png";
 const projects = [
   {
     title: "BuyEase",
     desc: "Full-stack e-commerce platform featuring secure payment integration, comprehensive product management, and inventory tracking.",
-    img: "/src/components/projects/buyease.png",
+    img:  `${buyease}`, 
     live_link: "https://buyease-620c4.web.app/",
     github_link: "https://github.com/MHRipon01/BuyEase-shopping-client",
   },
   {
     title: "SkillSurge",
     desc: "Online learning platform enabling students to enroll in courses, participate in live classes, and submit assignments with real-time feedback.",
-    img: "/src/components/projects/skillsurge.png",
+    img: `${skillsurge}`,
     live_link: "https://skillsurge-8233a.web.app/",
     github_link: "https://github.com/MHRipon01/skillSurge-server",
   },
   {
     title: "FoodFirst",
     desc: "Community-driven food distribution platform connecting donors with individuals in need through a transparent and efficient request system.",
-    img: "/src/components/projects/foodfirst.png",
+    img: `${foodfirst}`,
     live_link: "https://food-first-7508b.web.app/",
     github_link: "https://github.com/MHRipon01/foodFirst-client",
   },
   {
     title: "Dazzling Days",
     desc: "Event management platform providing comprehensive event planning services and vendor connections for weddings, corporate events, and celebrations.",
-    img: "/src/components/projects/dazzling days.png",
+    img: `${dazzling}`,
     live_link: "https://dazzling-days-event.web.app/",
     github_link: "https://github.com/MHRipon01/dazzling-days",
   },

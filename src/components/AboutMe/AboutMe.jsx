@@ -2,18 +2,20 @@ import React from "react";
 import { FaRegClock } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
 import { MdWorkOutline } from "react-icons/md";
+import resume from "/src/components/AboutMe/ResumeOfMehediHasanRipon.pdf";
+import myPic from  "./edited-removebg-preview.png";
 
 const AboutMe = ({ isDark }) => {
 
-  // ✅ Resume Download
+  // Resume Download
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/src/components/AboutMe/ResumeOfMehediHasanRipon.pdf"; 
+    link.href = resume;
     link.download = "ResumeOfMHRipon.pdf";
     link.click();
   };
 
-  // ✅ Scroll to Contact Section
+  //Scroll to Contact Section
   const handleScroll = () => {
     const section = document.getElementById("contact");
     if (section) {
@@ -34,8 +36,9 @@ const AboutMe = ({ isDark }) => {
           {/* Header */}
           <div className="flex items-center gap-4 mb-6 ">
             <img
-              src="/src/assets/edited-removebg-preview.png"
-              className="w-[140px] h-[140px] rounded-xl object-cover"
+              src={myPic}
+             
+              className="w-[140px] h-[140px] rounded-xl object-cover" alt="Mehedi Hasan Ripon"
             />
             <h2
               style={{
@@ -65,33 +68,24 @@ const AboutMe = ({ isDark }) => {
           </div>
 
           {/* Content */}
-          <div className=" space-y-4 leading-relaxed">
-            <p>
-              I'm the developer who turns ideas into web experiences people
-              enjoy using. My mission is to build applications that look great,
-              load fast, and work for everyone.
-            </p>
+         {/* Content */}
+<div className="space-y-4 leading-relaxed">
+  <p>
+    I'm a curious and determined developer who loves turning ideas into real, working web experiences. My focus is on building applications that are fast, functional, and enjoyable for users.
+  </p>
 
-            <p>
-              I'm a 23 year old CSE grad, and since beginning my programming
-              journey in 2020, my curiosity has pushed me to dive deep into
-              fullstack development, with a strong focus on accessibility,
-              performance, and SEO.
-            </p>
+  <p>
+    I started my programming journey in 2020, and since then I’ve explored full-stack development, DSA, and competitive programming. I’ve earned a blackbelt from Programming Hero and achieved a 2⭐ rank on CodeChef, constantly challenging myself to improve.
+  </p>
 
-            <p>
-              At ansrsource, I worked as a frontend developer, contributing from
-              day one and developing the company's portfolio website, which
-              boosted sales by 70%.
-            </p>
+  <p>
+    Currently, I’m pursuing my B.Sc in Computer Science at CCN University of Science and Technology, set to graduate in 2028. I’m passionate about learning new technologies, creating meaningful projects, and pushing my skills further every day.
+  </p>
 
-            <p>
-              Beyond coding, I enjoy music, meeting like minded people, and
-              sharing ideas. Known as the “padhaku” among friends, I take pride
-              in being a consistent academic topper and graduating in 2024. I'm
-              currently open to fulltime roles and freelance opportunities.
-            </p>
-          </div>
+  <p>
+    Outside coding, I enjoy reading, exploring new ideas, and growing both mentally and physically. I’m open to full-time opportunities and freelancing, eager to contribute my skills to impactful projects.
+  </p>
+</div>
 
           {/* Buttons */}
           <div className="flex gap-4 mt-8">

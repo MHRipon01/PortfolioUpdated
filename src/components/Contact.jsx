@@ -6,7 +6,7 @@ import { SiGmail } from "react-icons/si";
 import toast, { Toaster } from "react-hot-toast";
 
 export default function Contact({ isDark }) {
-  // 🔁 Rotating Icons
+  // Rotating Icons
   const contactIcons = [
     { icon: <FaLinkedin />, bg: "from-blue-600 to-blue-400" },
     { icon: <SiGmail />, bg: "from-red-500 to-pink-500" },
@@ -77,7 +77,7 @@ export default function Contact({ isDark }) {
         "_sKr90YxRufzgabiG", // public key
       )
       .then(() => {
-        toast.success("Message sent successfully 🚀");
+        toast.success("Thanks for reaching out! 🚀");
 
         setForm({
           firstName: "",
@@ -96,7 +96,7 @@ export default function Contact({ isDark }) {
         isDark ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       }`}
     >
-      {/* 🔥 Toast container */}
+      {/* Toast container */}
       <Toaster position="top-right" reverseOrder={false} />
 
       <div className="max-w-5xl mx-auto">
@@ -112,7 +112,7 @@ export default function Contact({ isDark }) {
             </div>
           </div>
 
-          <h2 className="text-2xl font-bold">Contact Me</h2>
+          <h2 className="text-2xl font-bold" id="contact">Contact Me</h2>
         </div>
 
         {/* Description */}
@@ -227,7 +227,7 @@ export default function Contact({ isDark }) {
   );
 }
 
-// 🔹 Reusable Input with Tooltip Error
+//Reusable Input with Tooltip Error
 function InputField({
   label,
   name,

@@ -4,13 +4,31 @@ import { IoLocationOutline } from "react-icons/io5";
 import { MdWorkOutline } from "react-icons/md";
 
 const AboutMe = ({ isDark }) => {
+
+  // ✅ Resume Download
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/src/components/AboutMe/ResumeOfMehediHasanRipon.pdf"; 
+    link.download = "ResumeOfMHRipon.pdf";
+    link.click();
+  };
+
+  // ✅ Scroll to Contact Section
+  const handleScroll = () => {
+    const section = document.getElementById("contact");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section
-    className="p-10 max-w-200 m-auto "
-   
-    >
+    <section className="p-10 max-w-200 m-auto ">
       <div
-        className={` py-16 px-4 flex justify-center ${isDark ? "border border-[#00f2ffb4] bg-[#242533]" : "bg-[#FFFFFF"} relative lg:bottom-50  shadow-2xl border-2 rounded-2xl`}
+        className={` py-16 px-4 flex justify-center ${
+          isDark
+            ? "border border-[#00f2ffb4] bg-[#242533]"
+            : "bg-[#FFFFFF"
+        } relative lg:bottom-50  shadow-2xl border-2 rounded-2xl`}
       >
         <div className="max-w-4xl w-full  backdrop-blur-md rounded-2xl shadow-xl p-8">
           {/* Header */}
@@ -24,7 +42,6 @@ const AboutMe = ({ isDark }) => {
                 fontSize: "32px",
                 fontWeight: "bold",
                 color: isDark ? "#ffffff" : "black",
-
                 marginBottom: "20px",
               }}
             >
@@ -78,11 +95,17 @@ const AboutMe = ({ isDark }) => {
 
           {/* Buttons */}
           <div className="flex gap-4 mt-8">
-            <button className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#1f2937] to-[#374151] text-white font-medium shadow-md hover:opacity-90 transition">
+            <button
+              onClick={handleDownload}
+              className="px-6 py-3 rounded-xl bg-gradient-to-r from-[#1f2937] to-[#374151] text-white font-medium shadow-md hover:opacity-90 transition"
+            >
               Get my Resume
             </button>
 
-            <button className="px-6 py-3 rounded-xl bg-gray-800 text-white font-medium shadow-md hover:bg-gray-700 transition flex items-center gap-2">
+            <button
+              onClick={handleScroll}
+              className="px-6 py-3 rounded-xl bg-gray-800 text-white font-medium shadow-md hover:bg-gray-700 transition flex items-center gap-2"
+            >
               Hire Me →
             </button>
           </div>

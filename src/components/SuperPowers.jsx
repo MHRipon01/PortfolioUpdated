@@ -116,9 +116,7 @@ export default function SuperPowers({ isDark }) {
     >
       {/* Top */}
       <div className="flex items-center gap-4 mb-10">
-        <div className="text-5xl animate-bounce">
-          {skillLogos[currentLogo]}
-        </div>
+        <div className="text-5xl animate-bounce">{skillLogos[currentLogo]}</div>
         <h2 className="text-3xl font-bold">My Superpowers</h2>
       </div>
 
@@ -128,7 +126,6 @@ export default function SuperPowers({ isDark }) {
       </p>
 
       <HoverCard />
-
       {/* Sections */}
       <div className="space-y-8">
         {sections.map((section, i) => (
@@ -140,9 +137,8 @@ export default function SuperPowers({ isDark }) {
             >
               {section.title}
             </h4>
-
+        
             <div className="flex flex-wrap gap-3">
-              // eslint-disable-next-line no-unused-vars
               {section.skills.map(({ icon: Icon, color, name }, idx) => (
                 <span
                   key={idx}

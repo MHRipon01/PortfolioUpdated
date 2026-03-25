@@ -4,6 +4,8 @@ import AboutMe from "./components/AboutMe";
 import "./index.css";
 import SuperPowers from "./components/SuperPowers";
 import Projects from "./components/projects/Projects";
+import Academic from "./components/Academic/Academic";
+import Contact from "./components/Contact";
 // import Hero from "./components/Hero";
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
       <AboutMe isDark={isDark} />
       <SuperPowers isDark={isDark}/>
       <Projects isDark={isDark} />
+      <Academic isDark={isDark} />
+      <Contact isDark={isDark} />
     </div>
   );
 }
